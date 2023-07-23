@@ -42,3 +42,11 @@ exclude:
 - LICENSE.md
 - CONTRIBUTING.md
 - README.md 
+# Disabled during construction
+- all_posts.md
+- elements.md
+- events.md
+- projects.md
+- generic.md
+- landing.md
+- gardena-valve-servo-adapter.md
