@@ -1,7 +1,7 @@
 ---
 layout: page
 title: //Slash
-image: assets/images/pic01.jpg
+image: /assets/images/pic01.jpg
 nav-menu: false
 ---
 
