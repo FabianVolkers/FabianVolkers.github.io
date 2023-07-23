@@ -32,7 +32,7 @@ show_tile: false
 				<header class="major">
 					<h3>{{ event.title }}</h3>
 				</header>
-				<p>{{ event.description }}</p>
+				<p>{{ event.excerpt | markdownify }}</p>
 				<ul class="actions">
 					<li><a href="{{ event.url }}" class="button">Learn more</a></li>
 				</ul>
