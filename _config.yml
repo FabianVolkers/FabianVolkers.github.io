@@ -19,6 +19,9 @@ collections:
     output: true
   events:
     output: true
+    order:
+      - unicon.md
+      - slash.md
 
 # homepage tiles
 tiles-source: pages,events # accepts comma separated list of "posts", "pages", or collection labels
