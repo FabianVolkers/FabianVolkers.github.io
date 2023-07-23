@@ -4,8 +4,8 @@ subtitle: Volkers
 email: contact@fabianvolkers.com
 description: Software Engineer, Event Technician and 3D Printing Enthusiast
 baseurl: "" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
-author:
+url: https://ffvo.dev # the base hostname & protocol for your site
+author: Fabian Volkers
 street_address:
 city:
 state:
