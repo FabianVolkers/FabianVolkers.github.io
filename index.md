@@ -1,5 +1,5 @@
 ---
-layout: construction
+layout: home
 title: Home
 landing-title: 'Hi, my name is Fabian'
 description: null
