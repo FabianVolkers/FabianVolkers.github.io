@@ -25,7 +25,7 @@ collections:
       - slash.md
 
 # homepage tiles
-tiles-source: pages,events # accepts comma separated list of "posts", "pages", or collection labels
+tiles-source: pages,events,projects # accepts comma separated list of "posts", "pages", or collection labels
 tiles-count: 6
 
 # social settings (key must match name of font awesome icon)
