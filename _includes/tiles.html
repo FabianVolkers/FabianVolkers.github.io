@@ -18,7 +18,7 @@
     </span>
     <header class="major">
       <h3><a href="{{ tile.url  | relative_url }}" class="link">{{ tile.title }}</a></h3>
-      <p>{{ tile.description }}</p>
+      <p>{{ tile.description | default: tile.excerpt }}</p>
     </header>
   </article>
   {% endfor %}
