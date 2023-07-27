@@ -52,4 +52,6 @@ exclude:
 - "*.gemspec"
 - LICENSE.md
 - CONTRIBUTING.md
-- README.md 
+- README.md
+- all_posts.md
+- 2016-8-*.md # exclude example posts
