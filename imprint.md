@@ -3,7 +3,8 @@ layout: post
 title: Imprint
 description:
 image: assets/images/pic11.jpg
-nav-menu: true
+nav-menu: false
+show_tile: false
 ---
 
 Fabian Volkers
