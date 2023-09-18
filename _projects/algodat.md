@@ -16,17 +16,39 @@ nav-menu: false
 <h2>Sorting</h2>
 </header>
 <p>
-Hello
+Hello this is the intro
 </p>
-<header class="major">
-<h3>Selection Sort</h3>
-</header>
-<p>Selection sort is..</p>
-
-<script src="{% link assets/js/algodat/selectionSort.js %}">
-</script>
-<div id="canvas-selection-sort" style="position: relative; height: 600px; width: 800px"></div>
-</div>
+</div>  
 </section>
+
+<section id="two" class="spotlights">
+	<section style="flex-direction: row-reverse;">
+		<!-- <a href="generic.html" class="image"> -->
+        <script src="{% link assets/js/algodat/selectionSort.js %}">
+        </script>
+        <!-- <div id="canvas-container"> -->
+        <div id="canvas-selection-sort" style="position: relative; height: 100%; width: 800px; padding: 1% 0px;" data-position="center center"></div>
+        <!-- </div> -->
+			<!-- <img src="{% link assets/images/pic08.jpg %}" alt="" data-position="center center" /> -->
+		<!-- </a> -->
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h3>Selection Sort</h3>
+				</header>
+				<p>Selection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit amet</p>
+				<ul class="actions">
+					<li><a href="generic.html" class="button">Learn more</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</section>
+
+
+<p></p>
+
+
+
 
 </div>
