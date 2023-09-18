@@ -1,6 +1,6 @@
 console.log("Selection sort");
 const canvasParent = "canvas-selection-sort";
-
+const green = (135, 197, 164)
 // console.log(document.getElementById(canvasParent).offsetWidth);
 
 // initialize array with 30 random numbers
@@ -11,20 +11,23 @@ var play = false;
 var button, canvasRect, canvasHeight, canvasWidth, array;
 
 function setup() {
-  canvasWidth = document.getElementById(canvasParent).offsetWidth;
+  canvasWidth = document.getElementById(canvasParent).offsetWidth * 0.9;
   canvasHeight = canvasWidth * 0.75;
   array = Array.from({ length: 100 }, () =>
     Math.floor(Math.random() * canvasHeight)
   );
   let canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent("canvas-selection-sort");
+  canvas.elt.style.setProperty("margin", "5% 0px");
+//   let sectionHeight = canvas.elt.parentElement.parentElement.style.offsetHeight;
+//   canvas.elt.parentElement.style.setProperty("height", sectionHeight);
 //   canvas.elt.style.setProperty("position", "absolute");
     // canvas.elt.style.setProperty("left", "0");
     // canvas.elt.style.setProperty("top", "0");
     // canvas.elt.style.setProperty("z-index", "-1");
     // canvas.elt.style.setProperty("z-index", "-1");
 
-  background(0);
+  background(42, 47, 74);
   // play button in the center
   button = createButton("Play");
   button.size(90, 45);
@@ -65,12 +68,12 @@ function draw() {
     // centerButton();
     return;
   }
-  background(0);
+  background(42, 47, 74);
   const barWidth = width / array.length;
   for (let i = 0; i < array.length; i++) {
-    if (i == minIndex) fill(255, 0, 0);
-    else if (states[i] == 1) fill(255, 255, 0);
-    else if (i <= maxSortedIndex) fill(0, 255, 0);
+    if (i == minIndex) fill(236, 141, 129);
+    else if (states[i] == 1) fill(231, 183, 136);
+    else if (i <= maxSortedIndex) fill(135, 197, 164);
     else fill(255);
 
     rect(i * barWidth, height - array[i], barWidth, array[i]);
