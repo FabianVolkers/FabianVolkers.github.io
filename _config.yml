@@ -13,6 +13,13 @@ zip_code:
 country:
 phone:
 
+permalink: /:title
+page_excerpts: true
+collections:
+  projects:
+    output: true
+
+
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
 tiles-count: 6
@@ -48,5 +55,5 @@ exclude:
 - events.md
 - projects.md
 - generic.md
-- landing.md
+# - landing.md
 - gardena-valve-servo-adapter.md
