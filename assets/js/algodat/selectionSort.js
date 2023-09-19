@@ -1,26 +1,26 @@
 // import schema from "./schema.js";
-import {green, red, yellow, darkBlue} from "./config.js";
-import {sleep} from "./utils.js";
+import { green, red, yellow, darkBlue } from "./config.js";
+import { sleep } from "./utils.js";
 
-let selectionSortP5 = new p5((sketch) => {
+export const selectionSortP5 = new p5((sketch) => {
   var canvasParent = "canvas-selection-sort";
   var buttonParent = "button-container-selection-sort";
   var minIndex = 0;
   var maxSortedIndex = 0;
   var play = false;
-  var button, canvasHeight, canvasWidth, array, states;
+  var button, canvasHeight, canvasWidth, array, states, canvas;
 
   async function selectionSort(callback = () => {}) {
     const startTime = Date.now();
     let steps = 0;
-  
+
     console.log("Selection Sort");
-  
+
     for (let i = 0; i < array.length; i++) {
       states = Array.from({ length: array.length }, () => 0);
       minIndex = i;
       states[i] = 1;
-  
+
       for (let j = i + 1; j < array.length; j++) {
         // find the smallest value of the unsorted part
         if (array[j] < array[minIndex]) minIndex = j;
@@ -28,21 +28,21 @@ let selectionSortP5 = new p5((sketch) => {
         steps++;
         await sleep(2);
       }
-  
+
       // swap smallest value with first element of unsorted part
       const smallestValue = array[minIndex];
       array[minIndex] = array[i];
       array[i] = smallestValue;
       maxSortedIndex = i;
-  
+
       states[i] = 0;
     }
-  
+
     minIndex = -1;
-  
+
     const timeInMs = Date.now() - startTime;
     console.log(`Executed in ${timeInMs}ms and ${steps} steps`);
-  
+
     callback();
   }
 
@@ -50,7 +50,7 @@ let selectionSortP5 = new p5((sketch) => {
     button = sketch.createButton("Play");
     button.elt.id = id;
     button.parent(parent);
-  
+
     button.mousePressed(() => {
       play = true;
       button.hide();
@@ -73,13 +73,12 @@ let selectionSortP5 = new p5((sketch) => {
     );
     states = Array.from({ length: array.length }, () => 0);
 
-    let canvas = sketch.createCanvas(canvasWidth, canvasHeight);
+    canvas = sketch.createCanvas(canvasWidth, canvasHeight);
     canvas.parent(canvasParent);
     canvas.elt.style.setProperty("margin", "5% 0px");
 
     sketch.background(...darkBlue);
     createPlayButton("selection-sort-play-button", buttonParent);
-
   };
 
   sketch.draw = () => {
@@ -94,5 +93,5 @@ let selectionSortP5 = new p5((sketch) => {
 
       sketch.rect(i * barWidth, canvasHeight - array[i], barWidth, array[i]);
     }
-  }
+  };
 });

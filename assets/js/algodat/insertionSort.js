@@ -31,19 +31,19 @@ export const insertionSortP5 = new p5((sketch) => {
   async function insertionSort(callback = () => {}) {
     const startTime = Date.now();
     let steps = 0;
-  
+
     console.log("Insertion Sort");
     // const sortedArray = [...array];
-  
+
     for (let i = 0; i < array.length; i++) {
       maxSortedIndex = i;
-  
+
       for (let j = 0; j < maxSortedIndex; j++) {
         minIndex = j;
         if (array[j] > array[i]) {
           // insert next biggest item into array
           array.splice(j, 0, array[i]);
-  
+
           // remove element from array
           array.splice(i + 1, 1);
           break;
@@ -53,8 +53,7 @@ export const insertionSortP5 = new p5((sketch) => {
       }
     }
     minIndex = -1;
-  
-  
+
     const timeInMs = Date.now() - startTime;
     console.log(`Executed in ${timeInMs}ms and ${steps} steps`);
     callback();
