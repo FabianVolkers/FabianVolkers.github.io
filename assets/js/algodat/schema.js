@@ -27,7 +27,7 @@ export class sortFunctionSketch {
         this.button.mousePressed(() => {
             this.play = true;
             this.button.hide();
-            this.sortFunction(sortCallback);
+            this.sortFunction(this);
         });
     }
 
@@ -51,8 +51,8 @@ export class sortFunctionSketch {
             obj.canvasHeight = document.getElementById(obj.canvasParent).offsetHeight;
 
             obj.array = Array.from({ length: 100 }, () => Math.floor(Math.random() * obj.canvasHeight));
-            if (obj.states) {
-                obj.states = Array.from({ length: array.length }, () => 0);
+            if (Object.hasOwn(obj, "states")) {
+                obj.states = Array.from({ length: obj.array.length }, () => 0);
             }
 
             obj.canvas = sketch.createCanvas(obj.canvasWidth, obj.canvasHeight);
