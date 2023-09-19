@@ -1,7 +1,6 @@
-const green = [135, 197, 164]
-const red = [236, 141, 129]
-const yellow = [231, 183, 136]
-const darkBlue = [42, 47, 74]
+// import schema from "./schema.js";
+import {green, red, yellow, darkBlue} from "./config.js";
+
 
 let selectionSortP5 = new p5((sketch) => {
   var canvasParent = "canvas-selection-sort";
@@ -9,7 +8,7 @@ let selectionSortP5 = new p5((sketch) => {
   var minIndex = 0;
   var maxSortedIndex = 0;
   var play = false;
-  var button, canvasRect, canvasHeight, canvasWidth, array, states;
+  var button, canvasHeight, canvasWidth, array, states;
 
   async function selectionSort(callback = () => {}) {
     const startTime = Date.now();

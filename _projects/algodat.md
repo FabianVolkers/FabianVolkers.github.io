@@ -27,7 +27,7 @@ Hello this is the intro
 <section id="two" class="spotlights">
 	<section style="flex-direction: row-reverse;">
 		<!-- <a href="generic.html" class="image"> -->
-        <script src="{% link assets/js/algodat/selectionSort.js %}">
+        <script type= "module" src="{% link assets/js/algodat/selectionSort.js %}">
         </script>
         <!-- <div id="canvas-container"> -->
         <div class ="content" style="width: 40%;">
