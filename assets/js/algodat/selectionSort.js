@@ -1,6 +1,6 @@
 // import schema from "./schema.js";
 import {green, red, yellow, darkBlue} from "./config.js";
-
+import {sleep} from "./utils.js";
 
 let selectionSortP5 = new p5((sketch) => {
   var canvasParent = "canvas-selection-sort";
@@ -96,8 +96,3 @@ let selectionSortP5 = new p5((sketch) => {
     }
   }
 });
-
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
