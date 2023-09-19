@@ -21,6 +21,9 @@ Hello this is the intro
 </div>  
 </section>
 
+<!-- Example -->
+<!-- https://www.toptal.com/developers/sorting-algorithms -->
+
 <section id="two" class="spotlights">
 	<section style="flex-direction: row-reverse;">
 		<!-- <a href="generic.html" class="image"> -->
