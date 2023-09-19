@@ -43,13 +43,6 @@ function createPlayButton(id, parent) {
   });
 }
 
-function centerButton() {
-  canvasRect = document
-    .getElementById(canvasParent)
-    .childNodes[0].getBoundingClientRect();
-  button.position(canvasRect.left + width / 2 - 50, canvasRect.top + 300 - 25);
-}
-
 function draw() {
   if (!play) return;
   background(42, 47, 74);
