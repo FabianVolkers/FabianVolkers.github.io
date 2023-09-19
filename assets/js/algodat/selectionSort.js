@@ -1,5 +1,6 @@
 console.log("Selection sort");
 const canvasParent = "canvas-selection-sort";
+const buttonParent = "button-container";
 const green = (135, 197, 164)
 // console.log(document.getElementById(canvasParent).offsetWidth);
 
@@ -31,17 +32,7 @@ function setup() {
   // play button in the center
   button = createButton("Play");
   button.size(90, 45);
-  button.parent(canvasParent);
-  button.elt.style.setProperty("position", "absolute");
-  button.elt.style.setProperty("top", "0");
-  button.elt.style.setProperty("left", "calc(50% - 45px)");
-  button.elt.style.setProperty(
-    "margin-top",
-    `calc(${canvasHeight / 2}px - 22.5px)`
-  );
-
-  //   , marginTop = "50%");
-  //   console.log(canvasRect.left, canvasRect.top)
+  button.parent(buttonParent);
 
   button.mousePressed(() => {
     play = true;

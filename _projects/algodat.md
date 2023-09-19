@@ -30,7 +30,12 @@ Hello this is the intro
         <script src="{% link assets/js/algodat/selectionSort.js %}">
         </script>
         <!-- <div id="canvas-container"> -->
-        <div id="canvas-selection-sort" style="position: relative; height: 100%; width: 800px; padding: 1% 0px;" data-position="center center"></div>
+        <div class ="content" style="width: 40%;">
+			<div style="position: relative; width: 100%; height: 100%">
+			<div id="canvas-selection-sort" class="inner" style="position: relative;" data-position="center center"></div>
+			<div id="button-container" style="top: 0;width: 100%; height: 100%; position: absolute; display: flex; align-items: center; justify-content: center"></div>
+			</div>
+        </div>
         <!-- </div> -->
 			<!-- <img src="{% link assets/images/pic08.jpg %}" alt="" data-position="center center" /> -->
 		<!-- </a> -->
