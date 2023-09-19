@@ -49,6 +49,18 @@ Hello this is the intro
 			</div>
 		</div>
 	</section>
+	<section style="flex-direction: row;">
+		<div class="content">
+		<div class="inner">
+		<header class="major">
+					<h4>Time Complexity</h4>
+				</header>
+		</div>
+		</div>
+		<div class="content" style="width: 40%;">
+		<script src="https://gist.github.com/FabianVolkers/07767313f3342ae1d3a68de61aa11b69.js"></script>
+		</div>
+	</section>
 	<section style="flex-direction: row-reverse;">
 		<!-- <a href="generic.html" class="image"> -->
         <!-- <script src="{% link assets/js/algodat/insertionSort.js %}">
@@ -72,6 +84,11 @@ Hello this is the intro
 			</div>
 		</div>
 	</section>
+	<section>
+		<div class="content">
+		<script src="https://gist.github.com/FabianVolkers/a81c197520a895e93a9da6af9be483c9.js"></script>
+		</div>
+	</section>
 	<section style="flex-direction: row-reverse;">
 		<!-- <a href="generic.html" class="image"> -->
         <!-- <script src="{% link assets/js/algodat/insertionSort.js %}">
@@ -93,6 +110,11 @@ Hello this is the intro
 				</header>
 				<p>Selection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit amet</p>
 			</div>
+		</div>
+	</section>
+	<section>
+		<div class="content">
+		<script src="https://gist.github.com/FabianVolkers/40bbbebdb4c6903bb0637665af4df4ef.js"></script>
 		</div>
 	</section>
 </section>
