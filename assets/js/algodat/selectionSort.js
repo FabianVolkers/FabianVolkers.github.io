@@ -12,7 +12,7 @@ var play = false;
 var button, canvasRect, canvasHeight, canvasWidth, array;
 
 function setup() {
-  canvasWidth = document.getElementById(canvasParent).offsetWidth * 0.9;
+  canvasWidth = document.getElementById(canvasParent).offsetWidth;
   canvasHeight = canvasWidth * 0.75;
   array = Array.from({ length: 100 }, () =>
     Math.floor(Math.random() * canvasHeight)
