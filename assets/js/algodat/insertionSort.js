@@ -1,91 +1,45 @@
 import { darkBlue, red, yellow, green } from "./config.js";
 import { sleep } from "./utils.js";
+import { sortFunctionSketch } from "./schema.js";
 
-export const insertionSortSketch = (sketch) => {
-  var canvasParent = "canvas-insertion-sort";
-  var buttonParent = "button-container-insertion-sort";
-  var minIndex = 0;
-  var maxSortedIndex = 0;
-  var play = false;
-  var button, canvasHeight, canvasWidth, array, states, canvas;
-
-  function createPlayButton(id, parent) {
-    button = sketch.createButton("Play");
-    button.elt.id = id;
-    button.parent(parent);
-
-    button.mousePressed(() => {
-      play = true;
-      button.hide();
-      insertionSort(() => {
-        setTimeout(() => {
-          play = false;
-          console.log(button.elt);
-          button.elt.textContent = "Replay";
-          button.show();
-        }, 1000);
-      });
-    });
-  }
-
-  async function insertionSort(callback = () => {}) {
-    const startTime = Date.now();
-    let steps = 0;
-
-    console.log("Insertion Sort");
-    // const sortedArray = [...array];
-
-    for (let i = 0; i < array.length; i++) {
-      maxSortedIndex = i;
-
-      for (let j = 0; j < maxSortedIndex; j++) {
-        minIndex = j;
-        if (array[j] > array[i]) {
-          // insert next biggest item into array
-          array.splice(j, 0, array[i]);
-
-          // remove element from array
-          array.splice(i + 1, 1);
-          break;
+const insertionSortConfig = {
+    canvasParent: "canvas-insertion-sort",
+    buttonParent: "button-container-insertion-sort",
+    play: false,
+    sortFunction: async (obj) => {
+        const startTime = Date.now();
+        let steps = 0;
+        let array = obj.array;
+    
+        console.log("Insertion Sort");
+    
+        for (let i = 0; i < array.length; i++) {
+          obj.maxSortedIndex = i;
+    
+          for (let j = 0; j < obj.maxSortedIndex; j++) {
+            obj.minIndex = j;
+            if (array[j] > array[i]) {
+              // insert next biggest item into array
+              array.splice(j, 0, array[i]);
+    
+              // remove element from array
+              array.splice(i + 1, 1);
+              break;
+            }
+            steps++;
+            await sleep(2);
+          }
         }
-        steps++;
-        await sleep(2);
-      }
-    }
-    minIndex = -1;
-
-    const timeInMs = Date.now() - startTime;
-    console.log(`Executed in ${timeInMs}ms and ${steps} steps`);
-    callback();
-    // return array;
-  }
-  sketch.setup = () => {
-    canvasWidth = document.getElementById(canvasParent).offsetWidth;
-    canvasHeight = document.getElementById(canvasParent).offsetHeight;
-    array = Array.from({ length: 100 }, () =>
-      Math.floor(Math.random() * canvasHeight)
-    );
-    states = Array.from({ length: array.length }, () => 0);
-
-    canvas = sketch.createCanvas(canvasWidth, canvasHeight);
-    canvas.parent(canvasParent);
-    canvas.elt.style.setProperty("margin", "5% 0px");
-
-    sketch.background(...darkBlue);
-    createPlayButton("insertion-sort-play-button", buttonParent);
-  };
-
-  sketch.draw = () => {
-    if (!play) return;
-    sketch.background(...darkBlue);
-    const barWidth = canvasWidth / array.length;
-    for (let i = 0; i < array.length; i++) {
-      if (i == minIndex) sketch.fill(...red);
-      else if (states[i] == 1) sketch.fill(...yellow);
-      else if (i <= maxSortedIndex) sketch.fill(...green);
-      else sketch.fill(255);
-
-      sketch.rect(i * barWidth, canvasHeight - array[i], barWidth, array[i]);
-    }
-  };
+        obj.minIndex = -1;
+    
+        const timeInMs = Date.now() - startTime;
+        console.log(`Executed in ${timeInMs}ms and ${steps} steps`);
+        obj.sortCallback();
+    },
+    yellow: (i, obj) => {return false},
+    green: (i, obj) => {return i <= obj.maxSortedIndex},
+    red: (i, obj) => {return i == obj.minIndex},
+    vars: ["maxSortedIndex", "minIndex"]
 };
+
+export const insertionSortSketch = new sortFunctionSketch(insertionSortConfig).sketch;

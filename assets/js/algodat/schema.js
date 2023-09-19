@@ -15,7 +15,7 @@ export class sortFunctionSketch {
         this.canvasWidth, this.canvasHeight, this.button, this.canvas, this.array;
 
         for (let varName of config.vars) {
-            this[varName] = config[varName];
+            this[varName] = config[varName] || null;
         }
     }
 
@@ -45,7 +45,6 @@ export class sortFunctionSketch {
     }
 
     _sketch(sketch, obj) {
-        console.log(obj)
         sketch.setup = () => {
             obj.canvasWidth = document.getElementById(obj.canvasParent).offsetWidth;
             obj.canvasHeight = document.getElementById(obj.canvasParent).offsetHeight;
