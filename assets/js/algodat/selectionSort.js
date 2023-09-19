@@ -1,7 +1,9 @@
 console.log("Selection sort");
 const canvasParent = "canvas-selection-sort";
 const buttonParent = "button-container";
-const green = (135, 197, 164)
+const green = [135, 197, 164]
+const red = [236, 141, 129]
+const yellow = [231, 183, 136]
 // console.log(document.getElementById(canvasParent).offsetWidth);
 
 // initialize array with 30 random numbers
@@ -62,9 +64,9 @@ function draw() {
   background(42, 47, 74);
   const barWidth = width / array.length;
   for (let i = 0; i < array.length; i++) {
-    if (i == minIndex) fill(236, 141, 129);
-    else if (states[i] == 1) fill(231, 183, 136);
-    else if (i <= maxSortedIndex) fill(135, 197, 164);
+    if (i == minIndex) fill(...red);
+    else if (states[i] == 1) fill(...yellow);
+    else if (i <= maxSortedIndex) fill(...green)
     else fill(255);
 
     rect(i * barWidth, height - array[i], barWidth, array[i]);
