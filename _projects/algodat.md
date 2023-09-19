@@ -7,6 +7,7 @@ nav-menu: false
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+<script type= "module" src="{% link assets/js/algodat/index.js %}"></script>
 
 <div id="main">
 
@@ -27,13 +28,13 @@ Hello this is the intro
 <section id="two" class="spotlights">
 	<section style="flex-direction: row-reverse;">
 		<!-- <a href="generic.html" class="image"> -->
-        <script type= "module" src="{% link assets/js/algodat/selectionSort.js %}">
-        </script>
+        <!-- <script type= "module" src="{% link assets/js/algodat/selectionSort.js %}">
+        </script> -->
         <!-- <div id="canvas-container"> -->
         <div class ="content" style="width: 40%;">
-			<div style="position: relative; width: 100%; height: 100%">
-			<div id="canvas-selection-sort" class="inner" style="position: relative; height: 100%" data-position="center center"></div>
-			<div id="button-container-selection-sort" style="top: 0;width: 100%; height: 100%; position: absolute; display: flex; align-items: center; justify-content: center"></div>
+			<div style="position: relative; width: 100%; height: 100%;">
+			<div id="canvas-selection-sort" class="inner" style="position: relative; height: 100%;" data-position="center center"></div>
+			<div id="button-container-selection-sort" style="top: 0;width: 100%; height: 100%; position: absolute; display: flex; align-items: center; justify-content: center;"></div>
 			</div>
         </div>
         <!-- </div> -->
@@ -50,13 +51,13 @@ Hello this is the intro
 	</section>
 	<section style="flex-direction: row-reverse;">
 		<!-- <a href="generic.html" class="image"> -->
-        <script src="{% link assets/js/algodat/insertionSort.js %}">
-        </script>
+        <!-- <script src="{% link assets/js/algodat/insertionSort.js %}">
+        </script> -->
         <!-- <div id="canvas-container"> -->
         <div class ="content" style="width: 40%;">
 			<div style="position: relative; width: 100%; height: 100%">
-			<div id="canvas-selection-sort" class="inner" style="position: relative; height: 100%" data-position="center center"></div>
-			<div id="button-container" style="top: 0;width: 100%; height: 100%; position: absolute; display: flex; align-items: center; justify-content: center"></div>
+			<div id="canvas-insertion-sort" class="inner" style="position: relative; height: 100%" data-position="center center"></div>
+			<div id="button-container-insertion-sort" style="top: 0;width: 100%; height: 100%; position: absolute; display: flex; align-items: center; justify-content: center"></div>
 			</div>
         </div>
         <!-- </div> -->
