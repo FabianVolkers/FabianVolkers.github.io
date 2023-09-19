@@ -1,17 +1,13 @@
-console.log("Selection sort");
 const canvasParent = "canvas-selection-sort";
 const buttonParent = "button-container";
 const green = [135, 197, 164]
 const red = [236, 141, 129]
 const yellow = [231, 183, 136]
-// console.log(document.getElementById(canvasParent).offsetWidth);
 
-// initialize array with 30 random numbers
-var states = Array.from({ length: array.length }, () => 0);
 var minIndex = 0;
 var maxSortedIndex = 0;
 var play = false;
-var button, canvasRect, canvasHeight, canvasWidth, array;
+var button, canvasRect, canvasHeight, canvasWidth, array, states;
 
 function setup() {
   canvasWidth = document.getElementById(canvasParent).offsetWidth;
@@ -19,21 +15,14 @@ function setup() {
   array = Array.from({ length: 100 }, () =>
     Math.floor(Math.random() * canvasHeight)
   );
+  states = Array.from({ length: array.length }, () => 0);
   let canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent("canvas-selection-sort");
   canvas.elt.style.setProperty("margin", "5% 0px");
-//   let sectionHeight = canvas.elt.parentElement.parentElement.style.offsetHeight;
-//   canvas.elt.parentElement.style.setProperty("height", sectionHeight);
-//   canvas.elt.style.setProperty("position", "absolute");
-    // canvas.elt.style.setProperty("left", "0");
-    // canvas.elt.style.setProperty("top", "0");
-    // canvas.elt.style.setProperty("z-index", "-1");
-    // canvas.elt.style.setProperty("z-index", "-1");
 
   background(42, 47, 74);
-  // play button in the center
   button = createButton("Play");
-  button.size(90, 45);
+  button.elt.id = "selection-sort-play-button"
   button.parent(buttonParent);
 
   button.mousePressed(() => {
@@ -42,7 +31,8 @@ function setup() {
     selectionSort(() => {
         setTimeout(() => {
             play = false;
-            // button.elt.innerHTML("Replay")
+            console.log(button.elt)
+            button.elt.textContent = "Replay"
             button.show();
         }, 1000);
     });
@@ -57,10 +47,7 @@ function centerButton() {
 }
 
 function draw() {
-  if (!play) {
-    // centerButton();
-    return;
-  }
+  if (!play) return;
   background(42, 47, 74);
   const barWidth = width / array.length;
   for (let i = 0; i < array.length; i++) {
@@ -103,7 +90,6 @@ async function selectionSort(callback = () => {}) {
 
   minIndex = -1;
 
-  // if(DEBUG) console.log("Sorted Array: ", array)
   const timeInMs = Date.now() - startTime;
   console.log(`Executed in ${timeInMs}ms and ${steps} steps`);
 
