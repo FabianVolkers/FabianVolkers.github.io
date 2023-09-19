@@ -37,9 +37,6 @@ Hello this is the intro
 					<h3>Selection Sort</h3>
 				</header>
 				<p>Selection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit amet</p>
-				<ul class="actions">
-					<li><a href="generic.html" class="button">Learn more</a></li>
-				</ul>
 			</div>
 		</div>
 	</section>
