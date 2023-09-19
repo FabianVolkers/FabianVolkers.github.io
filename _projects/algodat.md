@@ -72,6 +72,29 @@ Hello this is the intro
 			</div>
 		</div>
 	</section>
+	<section style="flex-direction: row-reverse;">
+		<!-- <a href="generic.html" class="image"> -->
+        <!-- <script src="{% link assets/js/algodat/insertionSort.js %}">
+        </script> -->
+        <!-- <div id="canvas-container"> -->
+        <div class ="content" style="width: 40%;">
+			<div style="position: relative; width: 100%; height: 100%">
+			<div id="canvas-bubble-sort" class="inner" style="position: relative; height: 100%" data-position="center center"></div>
+			<div id="button-container-bubble-sort" style="top: 0;width: 100%; height: 100%; position: absolute; display: flex; align-items: center; justify-content: center"></div>
+			</div>
+        </div>
+        <!-- </div> -->
+			<!-- <img src="{% link assets/images/pic08.jpg %}" alt="" data-position="center center" /> -->
+		<!-- </a> -->
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h3>Bubble Sort</h3>
+				</header>
+				<p>Selection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit ametSelection sort is.. lorem ipsum dolor sit amet</p>
+			</div>
+		</div>
+	</section>
 </section>
 
 
