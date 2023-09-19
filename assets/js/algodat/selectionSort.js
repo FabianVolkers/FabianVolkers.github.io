@@ -21,22 +21,26 @@ function setup() {
   canvas.elt.style.setProperty("margin", "5% 0px");
 
   background(42, 47, 74);
+  createPlayButton("selection-sort-play-button", buttonParent);
+}
+
+function createPlayButton(id, parent) {
   button = createButton("Play");
-  button.elt.id = "selection-sort-play-button"
-  button.parent(buttonParent);
+  button.elt.id = id;
+  button.parent(parent);
 
   button.mousePressed(() => {
     play = true;
     button.hide();
     selectionSort(() => {
-        setTimeout(() => {
-            play = false;
-            console.log(button.elt)
-            button.elt.textContent = "Replay"
-            button.show();
-        }, 1000);
+      setTimeout(() => {
+        play = false;
+        console.log(button.elt);
+        button.elt.textContent = "Replay";
+        button.show();
+      }, 1000);
     });
-});
+  });
 }
 
 function centerButton() {
