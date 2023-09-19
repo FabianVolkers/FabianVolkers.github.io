@@ -1,7 +1,11 @@
-import { insertionSortP5 } from "./insertionSort.js";
-import { selectionSortP5 } from "./selectionSort.js";
+import { insertionSortSketch } from "./insertionSort.js";
+import { selectionSortSketch } from "./selectionSort.js";
 
-export const algodat = {
-  insertionSortP5,
-  selectionSortP5,
+const enabledSketches = [
+    insertionSortSketch,
+    selectionSortSketch,
+];
+
+for(let sketch of enabledSketches) {
+    new p5(sketch);
 };

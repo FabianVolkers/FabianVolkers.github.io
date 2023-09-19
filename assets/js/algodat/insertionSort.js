@@ -1,7 +1,7 @@
 import { darkBlue, red, yellow, green } from "./config.js";
 import { sleep } from "./utils.js";
 
-export const insertionSortP5 = new p5((sketch) => {
+export const insertionSortSketch = (sketch) => {
   var canvasParent = "canvas-insertion-sort";
   var buttonParent = "button-container-insertion-sort";
   var minIndex = 0;
@@ -88,4 +88,4 @@ export const insertionSortP5 = new p5((sketch) => {
       sketch.rect(i * barWidth, canvasHeight - array[i], barWidth, array[i]);
     }
   };
-});
+};

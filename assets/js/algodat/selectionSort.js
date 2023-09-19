@@ -2,7 +2,7 @@
 import { green, red, yellow, darkBlue } from "./config.js";
 import { sleep } from "./utils.js";
 
-export const selectionSortP5 = new p5((sketch) => {
+export const selectionSortSketch = (sketch) => {
   var canvasParent = "canvas-selection-sort";
   var buttonParent = "button-container-selection-sort";
   var minIndex = 0;
@@ -94,4 +94,4 @@ export const selectionSortP5 = new p5((sketch) => {
       sketch.rect(i * barWidth, canvasHeight - array[i], barWidth, array[i]);
     }
   };
-});
+};
