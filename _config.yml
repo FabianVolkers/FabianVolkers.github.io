@@ -55,5 +55,5 @@ exclude:
 - events.md
 - projects.md
 - generic.md
-# - landing.md
+- landing.md
 - gardena-valve-servo-adapter.md
