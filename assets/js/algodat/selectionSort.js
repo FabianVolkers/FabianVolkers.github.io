@@ -3,6 +3,7 @@ const buttonParent = "button-container";
 const green = [135, 197, 164]
 const red = [236, 141, 129]
 const yellow = [231, 183, 136]
+const darkBlue = [42, 47, 74]
 
 var minIndex = 0;
 var maxSortedIndex = 0;
@@ -20,7 +21,7 @@ function setup() {
   canvas.parent("canvas-selection-sort");
   canvas.elt.style.setProperty("margin", "5% 0px");
 
-  background(42, 47, 74);
+  background(...darkBlue);
   createPlayButton("selection-sort-play-button", buttonParent);
 }
 
@@ -45,7 +46,7 @@ function createPlayButton(id, parent) {
 
 function draw() {
   if (!play) return;
-  background(42, 47, 74);
+  background(...darkBlue);
   const barWidth = width / array.length;
   for (let i = 0; i < array.length; i++) {
     if (i == minIndex) fill(...red);
